@@ -25,7 +25,7 @@ Once you make the mbsync container, you need a cron job or something so that it'
 | ssltype | None,STARTTLS, or IMAPS |
 | sslversions | SSLv3, TLSv1, TLSv1.1, TLSv1.2, TLSv1.3 |
 | mailbox_name | any name you want for the mailbox (ex. gmail) |
-| PUID | 1000 |
+| PUID | UID, same as dovecot PUID |
 
 Dovecot Repo - https://github.com/jon6fingrs/dovecot
 Mbsync Repo - https://github.com/jon6fingrs/mbsync
