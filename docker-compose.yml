@@ -17,7 +17,7 @@ services:
       - ssl_cert=cert1.pem
       - ssl_key=privkey1.pem
       - ssl=required
-      - server_address=imap.boob.com
+      - server_address=imap.home.local
   mbsync:
     image: thehelpfulidiot/mbsync:latest
     container_name: mbsync
