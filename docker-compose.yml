@@ -7,7 +7,7 @@ services:
       - "993:993"
     volumes:
       - /path/to/ssl:/ssl
-      - /path/to/mail:/mail
+      - /path/to/mail:/mail # same as mbsync
       - /path/to/logs:/var/log/dovecot
     environment:
       - email_username=bob
@@ -22,7 +22,7 @@ services:
     image: thehelpfulidiot/mbsync:latest
     container_name: mbsync
     volumes:
-      - /path/to/mail:/mail
+      - /path/to/mail:/mail # same as dovecot
     environment:
       - host_name=server
       - port=port
