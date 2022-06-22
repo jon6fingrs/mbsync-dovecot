@@ -6,14 +6,14 @@ Once you make the mbsync container, you need a cron job or something so that it'
 ## Dovecot
 | Environment Variable | Description |
 | --- | --- |
-| email_username | remote username |
-| email_password | remote password |
+| email_username | local username |
+| email_password | local password |
 | PUID | UID, same as mbsync PUID |
 | disable_plaintext_auth | yes or no |
 | ssl_cert | filename, ex. fullchain1.pem |
 | ssl_key | filename, ex. privkey1.pem |
 | ssl | required, yes, or no |
-| server_address | imap server address |
+| server_address | local imap server address |
 
 ## Mbsync
 | Environment Variable | Description |
