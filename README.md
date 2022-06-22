@@ -1,5 +1,5 @@
 # mbsync-dovecot
-This is an example docker compose file for the mbsync and dovecot containers. These containers were created for archival purposes of a remote email server. Email is synced locally in Maildir format. Deletions on remote server are not propagated. Dovecot then acts as an imap server. I use mine locally since my devices have split tunnel wireguard. I suppose you could expose your email server to the internet but that would scare me.
+This is an example docker compose file for the mbsync and dovecot containers. I did not write nor I am affiliated with the authors of these applications. These containers were created for archival purposes of a remote email server. Email is synced locally in Maildir format. Deletions on remote server are not propagated. Dovecot then acts as an imap server. I use mine locally since my devices have split tunnel wireguard. I suppose you could expose your email server to the internet but that would scare me.
 
 Once you make the mbsync container, you need a cron job or something so that it'll autorun every X minutes (I have mine run every 5 minutes)
 
@@ -32,3 +32,7 @@ Mbsync Repo - https://github.com/jon6fingrs/mbsync
 
 Dovecot Docker Hub - https://hub.docker.com/r/thehelpfulidiot/dovecot
 Mbsync Docker Hub - https://hub.docker.com/r/thehelpfulidiot/mbsync
+
+For bonus points, you can install a web frontend email client to access these local emails. I have an example of one for Roundcube on my blog post which inspired this project.
+
+https://thehelpfulidiot.com/making-an-automatic-email-backup-part-2
