@@ -94,6 +94,7 @@ Solr Repo - https://github.com/jon6fingrs/solr
 
 Dovecot Docker Hub - https://hub.docker.com/r/thehelpfulidiot/dovecot
 Mbsync Docker Hub - https://hub.docker.com/r/thehelpfulidiot/mbsync
+Solr Docker Hub - https://hub.docker.com/repository/docker/thehelpfulidiot/solr/general
 
 For bonus points, you can install a web frontend email client to access these local emails. I have an example of one for Roundcube on my blog post which inspired this project.
 
