@@ -1,10 +1,11 @@
-version: "3.1" 
 services:
   dovecot:
     image: thehelpfulidiot/dovecot:latest
     container_name: dovecot
+    restart: always
     ports:
       - "993:993"
+      - "143:143"
     volumes:
       - /path/to/ssl:/ssl
       - /path/to/mail:/mail # same as mbsync
@@ -14,13 +15,16 @@ services:
       - email_password=odenkirk
       - PUID=1000
       - disable_plaintext_auth=no
-      - ssl_cert=cert1.pem
-      - ssl_key=privkey1.pem
+      - ssl_cert=cert.pem
+      - ssl_key=key.pem
       - ssl=required
       - server_address=imap.home.local
+      - dh_pem=yes
+      
   mbsync:
     image: thehelpfulidiot/mbsync:latest
     container_name: mbsync
+    restart: always
     volumes:
       - /path/to/mail:/mail # same as dovecot
     environment:
@@ -32,3 +36,19 @@ services:
       - sslversions=TLSv1.2
       - mailbox_name=gmail
       - PUID=1000
+      - cron=yes
+
+  solr:
+    image: thehelpfulidiot/solr:latest
+    container_name: solr
+#    ports:
+#      - "8983:8983"
+    volumes:
+      - solr-data:/var/solr/data/dovecot/data/index
+    restart: always
+
+volumes:
+  solr-data:
+
+
+  
