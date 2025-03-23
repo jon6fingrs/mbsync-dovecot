@@ -44,7 +44,7 @@ services:
 #    ports:
 #      - "8983:8983"
     volumes:
-      - solr-data:/var/solr/data/dovecot/data/index
+      - solr-data:/var/solr
     restart: always
 
 volumes:
