@@ -1,4 +1,15 @@
 # mbsync-dovecot
+
+> **This repository is no longer maintained.** It has been replaced by
+> [mailstack](https://github.com/jon6fingrs/mailstack), which brings mbsync,
+> Dovecot 2.4 and fast full-text search together in one repo, with tested
+> images for amd64 and arm64. It includes everything this example set up.
+>
+> Your existing mail folder works with it as is, so nothing gets downloaded
+> again: see [MIGRATING.md](https://github.com/jon6fingrs/mailstack/blob/main/MIGRATING.md).
+> The `thehelpfulidiot/*` images on Docker Hub stay available but won't be
+> updated.
+
 This is an example docker compose file for the mbsync, dovecot, and now solr containers. I did not write nor I am affiliated with the authors of these applications. These containers were created for archival purposes of a remote email server. Email is synced locally in Maildir format. Deletions on remote server are not propagated. Dovecot then acts as an imap server. Solr indexes the mailbox and facilitates searches.
 I use mine locally since my devices have split tunnel wireguard. I suppose you could expose your email server to the internet but that would scare me.
 
